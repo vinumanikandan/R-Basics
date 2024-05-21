@@ -29,7 +29,9 @@ R is a statistical programming language and is a powerful tool for data processi
 - It includes a console, syntax-highlighting editor that supports direct code execution, as well as tools for plotting, history, debugging and workspace management
 
 - RStudio is available in open source and commercial editions and runs on the desktop (Windows, Mac, and Linux)
-  
+
+![Rstudio Screenshot](images/Rstudio.png)
+
   
 [More information about R Studio](https://posit.co)
 
