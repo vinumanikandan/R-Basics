@@ -79,11 +79,16 @@ R is a statistical programming language and is a powerful tool for data processi
 
 ## Basic Data Types in R
 
-**numeric** -  data are numbers that contain a decimal. Actually they can also be whole numbers  (10.5, 55, 787)
-**integer** -  whole numbers (those numbers without a decimal point).(1L, 55L, 100L, where the letter "L" declares this as an integer)
-**complex**  - (9 + 3i, where "i" is the imaginary part)
-**character** - data are used to represent string values  (a.k.a. string) - ("k", "R is exciting", "FALSE", "11.5")
-**logical**  (a.k.a. boolean) - (TRUE or FALSE)
+- **numeric** -  data are numbers that contain a decimal. Actually they can also be whole numbers  (10.5, 55, 787)
+
+- **integer** -  whole numbers (those numbers without a decimal point).(1L, 55L, 100L, where the letter "L" declares this as an integer)
+
+- **complex**  - (9 + 3i, where "i" is the imaginary part)
+
+- **character** - data are used to represent string values  (a.k.a. string) - ("k", "R is exciting", "FALSE", "11.5")
+
+- **logical**  (a.k.a. boolean) - (TRUE or FALSE)
+
 
 
 ## Operators
@@ -184,15 +189,20 @@ help(log)
 
 ## Converting normal commands a  programming language
 
+By assigning the data to to meaning full variaable we can reuse the variable multiple times 
+
 ```
-x<-1
-y<-2
-z<-x+y 
-z
+Num_1<-1
+Num_2<-2
+Sum_12<-Num_1+Num_2 
+Sum_12
 ```
 **[1] 3**
 
-## Task 2: Create 3 variable 'a1,a2,a3' for 3 numbers  56,40 and 22 and create a sum of these 3 variables and store them in new variable A123 and then log2 transform A123 and store in a new variable Log_A123. Display A123 and LA123
+## Task 2: 
+1  Create 3 variable 'a1,a2,a3' for 3 numbers  56,40 and 22 
+2. Create a sum of these 3 variables and store them in new variable A123 and 
+3. Log2 transform A123 and store in a new variable Log_A123. Display A123 and LA123
 
 <details>
 
@@ -205,6 +215,7 @@ a3<-22
 
 A123<-a1+a2+a3
 A123
+
 Log_A123<-log2(A123)
 Log_A123
 ```
@@ -261,4 +272,62 @@ In the above example the vectors are multipled by sequential order and resued ti
 **(1.3*5) (0.32*1) (10.5*5)  (5.90*1) (6.30*5)**
 
 
- 
+## Generating sequencial numbers
+
+Instead of hard coding the sequencial numbers such as 'c(1,2,3,4,5,6,7,8,9,10)'
+
+```
+1:10
+
+```
+will do the same output **[1]  1  2  3  4  5  6  7  8  9 10**
+
+In order to create rever sequential number
+
+```
+10:1
+
+```
+**[1] 10  9  8  7  6  5  4  3  2  1**
+
+## Using seq()
+
+Another method to generate sequential number is to use **seq() function**  which is more flexible
+
+```
+seq(from=1, to=10)
+
+```
+
+## Task 3: 
+Find what are the available parameters/options associated with function seq()
+<details>
+  <summary>Task 3 answer</summary>
+  
+```
+help(seq)
+```
+![sequence generation  help Screenshot](images/seq.png)
+
+</details>
+
+## Task 4: 
+
+- 1 create a vector of even numbers between 1 and 10
+
+- 2 create a vector of odd numbers between 1 and 10 
+
+<details>
+  <summary>Task 3 answer</summary>
+  
+```
+even_num<-seq(from=2, to=10,by=2)
+even_num
+
+odd_num<-seq(from=1, to=10,by=2)
+odd_num
+
+```
+
+</details>
+
