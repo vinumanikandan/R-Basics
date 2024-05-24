@@ -640,8 +640,39 @@ Combined[ (Combined$RollNumber> 3 & Combined$Grade>5),]
 
 # R Graphics
 
+R can generate high resolution customised graphs and figures. This can be achieved using default libraries or using external libraries
+- base (plot function)
+- ggplot2
+- lattice (3D plots)
 
-![plot Types screenshot][images/PlotTypes.png]
+## plot function
+
+plot function needs 2 parameters X-axis and Y-axis
+
+```
+x <- 1:100
+y <- log(x) + (x/100)^5
+plot(x,y)
+```
+![First plot Screenshot](images/first_plot.png)
+
+Customization of the plots
+- points() to add points to an existing plot
+- lines() to add a line to an existing plot
+- col indicating the colour
+- lwd indicating the line width
+- lty indicating the line type
+- pch indicating the plotting character (symbol)
+```
+lines(x,y+1)
+points(x,y-1, type="b")
+```
+![plot Types screenshot](images/Rplot2.png)
+
+
+![plot Types screenshot](images/PlotTypes.png )
+
+![plot Types screenshot](images/LineTypes.png)
 
 
 
