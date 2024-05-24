@@ -638,5 +638,10 @@ Combined[ (Combined$RollNumber> 3 & Combined$Grade>5),]
 </details>
 
 
+# R Graphics
+
+
+![plot Types screenshot][images/PlotTypes.png]
+
 
 
