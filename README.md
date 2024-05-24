@@ -201,8 +201,11 @@ Sum_12
 
 ## Task 2: 
 1  Create 3 variable 'a1,a2,a3' for 3 numbers  56,40 and 22 
-2. Create a sum of these 3 variables and store them in new variable A123 and 
+
+2. Create a sum of these 3 variables and store them in new variable A123 and
+   
 3. Log2 transform A123 and store in a new variable Log_A123. Display A123 and LA123
+   
 
 <details>
 
@@ -318,7 +321,7 @@ help(seq)
 - 2 create a vector of odd numbers between 1 and 10 
 
 <details>
-  <summary>Task 3 answer</summary>
+  <summary>Task 4 answer</summary>
   
 ```
 even_num<-seq(from=2, to=10,by=2)
@@ -330,4 +333,310 @@ odd_num
 ```
 
 </details>
+
+## Character strings as vector
+
+```
+charVector <- c("R","Basics","!")
+
+charVector
+```
+
+What if we insert number(s) in between the vector containing Character strings
+
+
+```
+charVector <- c("R","Basics", 10:5,"!")
+
+charVector
+```
+***[1] "R"      "Basics" "10"     "9"      "8"      "7"      "6"      "5"      "!"***
+
+even integers are converted as strings
+
+## Subsetting vectors
+
+**Subset by index**
+
+```
+numbers
+numbers[2]
+```
+
+**Subset by range**
+
+```
+numbers[2:5]
+```
+
+**Subset by range**
+
+```
+numbers[2:5]
+```
+**Subset by condition**
+
+```
+numbers[numbers>5]
+
+```
+***[1] 10.5  5.9  6.3***
+
+**Check if data is present**
+
+```
+"apple" %in% fruits
+
+```
+**Finding length**
+
+```
+length(numbers)
+length(fruits)
+
+```
+**Adding new element**
+
+```
+fruits<-append(fruits, "jackfruit", after = 2)
+numbers<-append(numbers, 10)
+
+
+```
+**Remove an element**
+
+```
+newfruits <- fruits[-1]
+newfruits
+fruits
+```
+**Replacing by index**
+
+```
+newfruits
+newfruits[1] <- "dragonfruit"
+newfruits
+```
+
+**Sorting**
+
+```
+sort(fruits) 
+sort(numbers)
+
+```
+
+**Repeat the Vectors**
+
+```
+repeat_each <- rep(c("Control","Treatment","AfterTreatment"), each = 3)
+```
+
+## Task 5: 
+
+- Subset the 2nd last index of a vector
+
+  <details>
+  <summary>Task 5 answer</summary>
+    ```
+    numbers[-2]
+
+    ```
+  </details>
+
+## Traversing through Different location
+
+Find the current location
+
+```
+getwd()
+```
+
+changing location 
+
+```
+  setwd("~/Desktop") #like cd command in linux
+
+```
+
+Listing the Files in a Directory/Folder
+
+```
+  dir() #current location
+  dir("~/Documents") #Specify another location
+```
+
+
+## Importing local data 
+
+By defualt R can imort few variaties of flat files using the following commands such as
+
+- read.table()
+- read.csv()
+- read.delim()
+
+
+R can also Read other pleanty of formats by installing specific libraries such as :
+
+- Read Excel spreadsheets (readxl)
+
+- Directly access databases (RODBC)
+
+R can access filesover the web
+
+```
+MyData<-read.csv("https://www.proteinatlas.org/ENSG00000134057.tsv",sep="\t",header=T)
+View(MyData)
+
+```
+## Data frames
+
+Data frames is a structured format made of columns(measurment) and rows (units)
+
+each Columns can hold different variables types
+
+**access first column**
+
+```
+MyData[,1] 
+```
+
+**access column "Ensembl"**
+
+```
+MyData[, "Ensembl"]
+MyData$Ensembl
+MyData[["Ensembl"]]
+MyData[3] #by index
+```
+**Creating data frames from scratch**
+
+```
+SI <- 1:10
+Marks <- seq(from=5,to=10,length=10)
+Names <- c("Name1","Name2","Name3","Name4","Name5", "Name6","Name7","Name8","Name9","Name10")
+df <- data.frame(RollNumber=SI, Grade=Marks, Subject=Names)
+df
+```
+
+**Column names of dataframe**
+
+```
+names(df)
+```
+***[1] "RollNumber" "Grade"      "Subject"***
+
+
+**FindingDiminesion (number of rows and columns)  dataframe**
+
+```
+dim(df) #dimension
+nrow(df) # number of rows
+ncol(df) #number of columns
+length(df) # length(number of columns)
+
+```
+**Adding new columns to existing dataframe**
+
+```
+df$AverageGrade <- 50:41
+
+```
+**Summarising the dataframe**
+
+```
+summary(df)
+
+```
+
+**Remove the first row and column**
+
+```
+dfNew <- df[-c(1), -c(1)]
+```
+
+**Combining Data Frames**
+
+```
+df2<-df #Making copy
+Combined <- rbind(df, df2) ## Concating the Dataframe
+View(Combined)
+
+```
+
+## Subseting data from dataframe
+
+Subset the data frame based on a column value
+
+```
+
+Combined[Combined$Subject == "Name1", ]
+
+
+```
+
+Subset the data frame based on a column value & display the values from specific column
+
+
+```
+
+Combined[ Combined$Subject == "Name1", "AverageGrade" ]
+
+
+```
+
+Subset the data frame based on multiple columns
+
+
+
+```
+
+Combined[ (Combined$RollNumber> 3 & Combined$Grade>5),]
+
+
+
+```
+
+
+
+## Task 6: 
+
+- create a dataframe variable 'mcu_films' by reading data through internet from this [location](https://www.openintro.org/data/tab-delimited/mcu_films.txt)
+- Find the number of columns and rows in the mcu_films dataframe
+- Create a new dataframe 'mcu_world_gross' with highest world wide gross in descending order
+- create a new table based on movie title haveing text 'Avengers'
+- write the output into a text file called 'Avengers.txt' in desktop
+
+<details>
+  <summary>Task 6 answer</summary>
+    
+  ```
+      # Reading file 
+    mcu_films<-read.csv("https://www.openintro.org/data/tab-delimited/mcu_films.txt",sep="\t",header=T)
+    View(mcu_films)
+    
+    # Find the column names of the datframe
+    names(mcu_films)
+    
+    #Find the dimension of the dataframe
+    dim(mcu_films)
+    
+    #Sort the table with highest gross collection (descending order) in the world and store in to a new dataframe called 'mcu_world_gross'
+    mcu_world_gross <- mcu_films[order(-mcu_films$gross_world),]
+    View(mcu_world_gross)
+    
+    
+    #create a new table based on movie title haveing text 'Avengers'
+    Avengers <- subset(mcu_films, grepl("Avengers", movie))
+    View(Avengers)
+    
+    #output
+    write.table(Avengers,file="Avengers.txt")
+  
+```
+
+</details>
+
+
+
 
