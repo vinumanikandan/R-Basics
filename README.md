@@ -488,6 +488,7 @@ R can also Read other pleanty of formats by installing specific libraries such a
 R can access filesover the web
 
 ```
+
 MyData<-read.csv("https://www.proteinatlas.org/ENSG00000134057.tsv",sep="\t",header=T)
 View(MyData)
 
@@ -501,16 +502,20 @@ each Columns can hold different variables types
 **access first column**
 
 ```
-MyData[,1] 
+
+MyData[,1]
+
 ```
 
 **access column "Ensembl"**
 
 ```
+
 MyData[, "Ensembl"]
 MyData$Ensembl
 MyData[["Ensembl"]]
 MyData[3] #by index
+
 ```
 **Creating data frames from scratch**
 
@@ -520,6 +525,7 @@ Marks <- seq(from=5,to=10,length=10)
 Names <- c("Name1","Name2","Name3","Name4","Name5", "Name6","Name7","Name8","Name9","Name10")
 df <- data.frame(RollNumber=SI, Grade=Marks, Subject=Names)
 df
+
 ```
 
 **Column names of dataframe**
@@ -657,7 +663,7 @@ x <- 1:100
 y <- log(x) + (x/100)^5
 plot(x,y)
 ```
-![First plot Screenshot](images/first_plot.png)
+![First plot Screenshot](images/first_plot.png){ width=50% }
 
 Customization of the plots
 - points() to add points to an existing plot
@@ -670,12 +676,12 @@ Customization of the plots
 lines(x,y+1)
 points(x,y-1, type="b")
 ```
-![plot Types screenshot](images/Rplot2.png)
+![plot Types screenshot](images/Rplot2.png){ width=50% }
 
 
-![plot Types screenshot](images/PlotTypes.png )
+![plot Types screenshot](images/PlotTypes.png ){ width=50% }
 
-![plot Types screenshot](images/LineTypes.png)
+![plot Types screenshot](images/LineTypes.png){ width=50% }
 
 
 
