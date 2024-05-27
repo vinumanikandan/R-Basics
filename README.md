@@ -121,7 +121,7 @@ R is a statistical programming language and is a powerful tool for data processi
 
 
 |Operator|Description|
-|:---:|:---:|
+|:---|:---|
 |&|Element-wise Logical AND operator. It returns TRUE if both elements are TRUE|
 |&&|Logical AND operator - Returns TRUE if both statements are TRUE|
 |\||Elementwise- Logical OR operator. It returns TRUE if one of the statement is TRUE|
