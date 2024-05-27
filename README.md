@@ -192,6 +192,7 @@ help(log)
 By assigning the data to to meaning full variaable we can reuse the variable multiple times 
 
 ```
+
 Num_1<-1
 Num_2<-2
 Sum_12<-Num_1+Num_2 
