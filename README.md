@@ -42,6 +42,44 @@ R is a statistical programming language and is a powerful tool for data processi
 [Download & install R Studio](https://posit.co/downloads/)
 
 
+## Installing Packages
+
+Packages are available through two main sources 
+
+CRAN ([Comprehensive R Archive Network]( https://cran.r-project.org/))
+
+```
+  install.packages(“hexbin”)
+  library(“hexbin”)
+
+```
+
+
+
+Bioconductor [ https://bioconductor.org/ ]
+
+Bioconductor provides tools for the analysis and comprehension of high-throughput genomic data. Bioconductor uses the R statistical programming language, and is open source and open development
+
+```
+
+  if (!requireNamespace("BiocManager", quietly = TRUE)) ### Run only once
+  install.packages(“BiocManager”) ### Run only once
+
+  BiocManager::install("Rsamtools")
+  library(“Rsamtools”)
+
+```
+
+## Find the installed libraries
+
+```
+
+  myLibList<- installed.packages()
+  View(myLibList)  #noting the capitalization
+
+```
+
+
 ## Scripts and workspace
 
 **R script (.R file)**
@@ -55,6 +93,7 @@ R is a statistical programming language and is a powerful tool for data processi
 - To save only specific R objects: save(object_name(s),"name_of_file.RData")
 - To save your entire workspace: save.image("name_of_file.RData")
 - To load your workspace / specific R objects: load("name_of_file.RData")
+
 
 ## R Markdown
 
@@ -129,6 +168,7 @@ R is a statistical programming language and is a powerful tool for data processi
 |\||Elementwise- Logical OR operator. It returns TRUE if one of the statement is TRUE|
 |\|\||Logical OR operator. It returns TRUE if one of the statement is TRUE.|
 |!|Logical NOT - returns FALSE if statement is TRUE|
+
 
 
 ## First Run in R 
@@ -684,6 +724,7 @@ points(x,y-1, type="b")
 ![plot Types screenshot](images/PlotTypes.png ){ width=50% }
 
 ![plot Types screenshot](images/LineTypes.png){ width=50% }
+
 
 
 
