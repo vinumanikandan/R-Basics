@@ -35,7 +35,7 @@ R is a statistical programming language and is a powerful tool for data processi
 
 ## Different Panels in R Studio
 
-![Rstudio Panels Screenshot](images/Rstudio_Panel.png)
+![Rstudio Panels Screenshot](images/Rstudio_Panel.png){ width=50% }
 
 [More information about R Studio](https://posit.co)
 
@@ -183,7 +183,7 @@ More information of a function can be accessed from R by using either one of the
 help(log)
 ```
 
-![Rstudio Screenshot](images/help.png)
+![Rstudio Screenshot](images/help.png){ width=50% }
 
 
 
@@ -313,7 +313,7 @@ Find what are the available parameters/options associated with function seq()
 ```
 help(seq)
 ```
-![sequence generation  help Screenshot](images/seq.png)
+![sequence generation  help Screenshot](images/seq.png){ width=50% }
 
 </details>
 
