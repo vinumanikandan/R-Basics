@@ -63,9 +63,11 @@ R is a statistical programming language and is a powerful tool for data processi
   - generate high quality reports that can be shared with an audience
   - fully reproducibel documentation with wide variety of dynamic output formats
 
-![Rmd output Screenshot](images/Rmd.png)
+![Rmd output Screenshot](images/Rmd.png){ width=50% }
+
 
 [More about R Markdown ](https://rmarkdown.rstudio.com/lesson-2.html)
+
 
 
 ## Basic information on Syntax
