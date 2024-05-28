@@ -696,9 +696,9 @@ R can generate high resolution customised graphs and figures. This can be achiev
 - ggplot2
 - lattice (3D plots)
 
-## plot function
+**Scatter plot**
 
-plot function needs 2 parameters X-axis and Y-axis
+Scatter plot is created using function plot(). plot function needs 2 parameters X-axis and Y-axis
 
 ```
 x <- 1:100
@@ -809,4 +809,22 @@ abline(lm(airquality$Ozone ~ airquality$Wind), col=8, lwd=2)
 ![plot abline h screenshot](images/Rplot_lm.png){ width=50% }
 
 
+**Histogram**
 
+To create histogram R base uses function hist(). The generic function hist computes a histogram of the given data values. If plot = TRUE, the resulting object of class "histogram" is plotted by plot.histogram, before it is returned.
+
+```
+hist(airquality$Wind)
+
+```
+
+![plot hist screenshot](images/Rplot_hist.png){ width=50% }
+
+Customization of the histogram
+
+```
+hist(airquality$Wind, freq=FALSE, main="Hist", col="grey") 
+lines(density(airquality$Wind), Col="blue", lwd=2)
+```
+
+![plot hist screenshot](images/Rplot_hist_Custom.png){ width=50% }
