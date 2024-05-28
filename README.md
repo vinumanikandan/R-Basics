@@ -828,3 +828,15 @@ lines(density(airquality$Wind), Col="blue", lwd=2)
 ```
 
 ![plot hist screenshot](images/Rplot_hist_Custom.png){ width=50% }
+
+
+**Boxplot**
+
+Produce box-and-whisker plot(s) of the given (grouped) values.
+
+
+```
+     
+boxplot(airquality$Ozone,ylab='airquality Ozone', col='white')    
+```
+
